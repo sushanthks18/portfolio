@@ -1,0 +1,12 @@
+IMPORTANT: Add your profile photo here!
+
+Filename: profile.jpg
+Location: /Users/sushanthks/Developer/myportfolio/public/profile.jpg
+
+Requirements:
+- Square format (at least 500x500px recommended)
+- Professional photo
+- Good lighting
+- Clear face visibility
+
+Temporary: The portfolio will show a Next.js image placeholder until you add your actual photo.
