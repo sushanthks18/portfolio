@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { Sprout, Droplets, Calculator, ExternalLink, Github } from 'lucide-react';
+import { Sprout, Droplets, Calculator, ExternalLink, Github, Code, Brain, Radio, Utensils } from 'lucide-react';
 import { gsap } from '@/lib/gsap';
 
 const projects = [
@@ -50,6 +50,67 @@ const projects = [
     github: 'https://github.com/sushanthks/digital-calculator',
     demo: '#',
   },
+  {
+  icon:Utensils,
+  title: 'Mess Feedback & Analytics System',
+  subtitle: 'Full-Stack MERN Dashboard',
+  description: 'A data-driven platform for Hostel Mess management, enabling students to rate meals and Owners to analyze feedback via interactive charts to reduce food waste.',
+  tech: ['React', 'TypeScript', 'Node.js', 'Express', 'MongoDB', 'Chart.js', 'Cloudinary', 'Tailwind'],
+  highlights: [
+    'Real-time Analytics Dashboard with Recharts visualization',
+    'Role-Based Authentication (Student vs Owner) with JWT',
+    'Weekly Menu Management system with Image Uploads',
+    'Secure Email Invitation workflow for onboarding owners',
+  ],
+  github: 'https://github.com/sushanthks18/Mess-Feedback-Analytics-System.git',
+  demo: '#',
+},
+  {
+    icon: Brain,
+    title: 'Anti-Greenwashing Carbon Credit Platform',
+    subtitle: 'Machine Learning Project',
+    description: 'Blockchain-based platform for authenticating carbon credit projects and preventing greenwashing through AI-powered verification',
+    tech: ['Python', 'TensorFlow', 'Blockchain', 'Solidity', 'Web3.js', 'Flask', 'React'],
+    highlights: [
+      'AI algorithms to detect fraudulent carbon credit claims',
+      'Smart contracts for transparent credit tracking',
+      'Real-time monitoring and verification system',
+      'Geospatial analysis for environmental impact validation',
+    ],
+    github: 'https://github.com/sushanthks18/Anti-Greenwashing-Carbon-Credit-Platform.git',
+    demo: '#',
+  },
+  {
+    icon: Calculator,
+    title: 'TaxSaver',
+    subtitle: 'Tax Calculation & Filing Application',
+    description: 'Comprehensive tax management application that simplifies tax calculation, filing, and compliance for individuals and small businesses',
+    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Tax API Integration', 'PDF Generation'],
+    highlights: [
+      'Intuitive tax calculation with real-time updates',
+      'Automated form generation and PDF export',
+      'Secure document upload and storage system',
+      'Tax deduction optimization algorithms',
+    ],
+    github: 'https://github.com/sushanthks18/TaxSaver.git',
+    demo: '#',
+  },
+  {
+    icon: Calculator,
+    title: 'Campus Queue Waiting Time Problem Analyzer',
+    subtitle: 'Queue Optimization Solution',
+    description: 'Analytics platform for measuring and optimizing queue waiting times in campus facilities like cafeterias, libraries, and administrative offices',
+    tech: ['Python', 'Data Analysis', 'Statistics', 'Queueing Theory', 'Visualization', 'Optimization Algorithms'],
+    highlights: [
+      'Statistical analysis of queue patterns and bottlenecks',
+      'Predictive modeling for peak waiting time estimation',
+      'Recommendation engine for optimal staffing levels',
+      'Data visualization for queue performance metrics',
+    ],
+    github: 'https://github.com/sushanthks18/Campus-Queue-Waiting-Time-Problem-Analyzer.git',
+    demo: '#',
+  }
+  
 ];
 
 export default function Projects() {

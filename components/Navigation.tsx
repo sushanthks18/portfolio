@@ -3,11 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Github, Linkedin, Code2, Instagram } from 'lucide-react';
 
-interface NavigationProps {
-  onPanelOpen: (panel: string) => void;
-}
-
-export default function Navigation({ onPanelOpen }: NavigationProps) {
+export default function Navigation() {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -36,8 +32,11 @@ export default function Navigation({ onPanelOpen }: NavigationProps) {
     setMobileMenuOpen(false);
   };
 
-  const handleNavClick = (panel: string) => {
-    onPanelOpen(panel);
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
     setMobileMenuOpen(false);
   };
 
@@ -67,25 +66,25 @@ export default function Navigation({ onPanelOpen }: NavigationProps) {
                 Home
               </button>
               <button
-                onClick={() => handleNavClick('about')}
+                onClick={() => scrollToSection('about')}
                 className="px-4 py-2 text-slate-300 hover:text-sky-400 hover:bg-slate-800/50 rounded-lg transition-all duration-200"
               >
                 About
               </button>
               <button
-                onClick={() => handleNavClick('projects')}
+                onClick={() => scrollToSection('projects')}
                 className="px-4 py-2 text-slate-300 hover:text-sky-400 hover:bg-slate-800/50 rounded-lg transition-all duration-200"
               >
                 Projects
               </button>
               <button
-                onClick={() => handleNavClick('skills')}
+                onClick={() => scrollToSection('skills')}
                 className="px-4 py-2 text-slate-300 hover:text-sky-400 hover:bg-slate-800/50 rounded-lg transition-all duration-200"
               >
                 Skills
               </button>
               <button
-                onClick={() => handleNavClick('contact')}
+                onClick={() => scrollToSection('contact')}
                 className="px-4 py-2 text-slate-300 hover:text-sky-400 hover:bg-slate-800/50 rounded-lg transition-all duration-200"
               >
                 Contact
@@ -95,7 +94,7 @@ export default function Navigation({ onPanelOpen }: NavigationProps) {
             {/* Social Icons */}
             <div className="hidden md:flex items-center gap-3">
               <a
-                href="https://github.com/sushanthks18?tab=repositories"
+                href="https://github.com/sushanthks18"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 text-slate-400 hover:text-sky-400 hover:bg-slate-800/50 rounded-lg transition-all"
@@ -164,25 +163,25 @@ export default function Navigation({ onPanelOpen }: NavigationProps) {
                 Home
               </button>
               <button
-                onClick={() => handleNavClick('about')}
+                onClick={() => scrollToSection('about')}
                 className="block w-full text-left px-4 py-2 text-slate-300 hover:text-sky-400 hover:bg-slate-800/50 rounded-lg transition-all"
               >
                 About
               </button>
               <button
-                onClick={() => handleNavClick('projects')}
+                onClick={() => scrollToSection('projects')}
                 className="block w-full text-left px-4 py-2 text-slate-300 hover:text-sky-400 hover:bg-slate-800/50 rounded-lg transition-all"
               >
                 Projects
               </button>
               <button
-                onClick={() => handleNavClick('skills')}
+                onClick={() => scrollToSection('skills')}
                 className="block w-full text-left px-4 py-2 text-slate-300 hover:text-sky-400 hover:bg-slate-800/50 rounded-lg transition-all"
               >
                 Skills
               </button>
               <button
-                onClick={() => handleNavClick('contact')}
+                onClick={() => scrollToSection('contact')}
                 className="block w-full text-left px-4 py-2 text-slate-300 hover:text-sky-400 hover:bg-slate-800/50 rounded-lg transition-all"
               >
                 Contact
@@ -191,7 +190,7 @@ export default function Navigation({ onPanelOpen }: NavigationProps) {
               {/* Mobile Social Icons */}
               <div className="flex items-center gap-3 px-4 pt-4 border-t border-slate-800">
                 <a
-                  href="https://github.com/sushanthks18?tab=repositories"
+                  href="https://github.com/sushanthks18"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 text-slate-400 hover:text-sky-400 hover:bg-slate-800/50 rounded-lg transition-all"

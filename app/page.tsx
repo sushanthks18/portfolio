@@ -19,35 +19,33 @@ import SkillsPanel from '@/components/panels/SkillsPanel';
 import ContactPanel from '@/components/panels/ContactPanel';
 
 export default function Home() {
-  const [activePanel, setActivePanel] = useState<string | null>(null);
-
   return (
     <>
       <LoadingCircuit />
       <CursorTrail />
       <AnimationToggle />
-      <Navigation onPanelOpen={setActivePanel} />
-      
-      {/* Detail Panels */}
-      <DetailPanel isOpen={activePanel !== null} onClose={() => setActivePanel(null)}>
-        {activePanel === 'about' && <AboutPanel />}
-        {activePanel === 'projects' && <ProjectsPanel />}
-        {activePanel === 'skills' && <SkillsPanel />}
-        {activePanel === 'contact' && <ContactPanel />}
-      </DetailPanel>
+      <Navigation />
       
       <main className="relative">
         <Hero />
         <CircuitDivider />
-        <Journey />
+        <div id="about">
+          <Journey />
+        </div>
         <CircuitDivider />
-        <Projects />
+        <div id="projects">
+          <Projects />
+        </div>
         <CircuitDivider />
-        <Skills />
+        <div id="skills">
+          <Skills />
+        </div>
         <CircuitDivider />
         <Achievements />
         <CircuitDivider />
-        <Contact />
+        <div id="contact">
+          <Contact />
+        </div>
       </main>
     </>
   );
