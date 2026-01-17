@@ -33,7 +33,7 @@ const projects = [
       'Water conservation through data-driven insights',
     ],
     github: 'https://github.com/sushanthks18/AquaAdvisor-AI-Powered-Water-Use-Efficiency-Advisor-for-Agriculture',
-    demo: 'https://aquai-saha.vercel.app',
+    demo: 'aqua-advisor-ai-powered-water-use-e.vercel.app',
   },
   {
     icon: Calculator,
@@ -108,7 +108,7 @@ const projects = [
       'Data visualization for queue performance metrics',
     ],
     github: 'https://github.com/sushanthks18/Campus-Queue-Waiting-Time-Problem-Analyzer.git',
-    demo: '#',
+    demo: 'campus-queue-analytics.vercel.app',
   }
   
 ];
